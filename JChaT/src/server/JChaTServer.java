@@ -13,7 +13,7 @@ public class JChaTServer {
         try {
             ServerSocket serverSocket= new ServerSocket(portNumber);
         } catch (IOException e) {
-            System.err.print("Could not listen on port " + portNumber);
+            System.err.println("Could not listen on port " + portNumber);
             System.exit(1);
 
         }
