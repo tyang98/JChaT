@@ -11,7 +11,13 @@ public class JChaTClient {
         Socket socket= null;
         try {
             socket= new Socket("localhost", portNumber);
+            Thread.sleep(1000);
+            Thread server= new Thread(new JChaTServerThread(socket));
+            server.start();
         } catch (IOException e) {
+            System.err.println("Fatal connection error!");
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             System.err.println("Fatal connection error!");
             e.printStackTrace();
         }

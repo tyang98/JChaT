@@ -8,8 +8,8 @@ import java.util.List;
 
 public class JChaTServer {
 
-    private static final int portNumber= 3000;
-    private static List<JChaTClientThread> clients;
+    private static final int portNumber= 4444;
+    protected static List<JChaTClientThread> clients;
     private static ServerSocket serverSocket;
 
     public static void main(String[] args) {
